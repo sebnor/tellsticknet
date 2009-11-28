@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TellStick", "TellStick\Tell
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tellstick Test", "Tellstick Test\Tellstick Test.csproj", "{BD72811D-CD9D-4B06-8BBF-6F5A074BFFF5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebController", "WebController\WebController.csproj", "{A4AE38E2-400B-485B-B96C-D4CC44D7A075}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,12 @@ Global
 		{BD72811D-CD9D-4B06-8BBF-6F5A074BFFF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD72811D-CD9D-4B06-8BBF-6F5A074BFFF5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BD72811D-CD9D-4B06-8BBF-6F5A074BFFF5}.Release|x86.ActiveCfg = Release|Any CPU
+		{A4AE38E2-400B-485B-B96C-D4CC44D7A075}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4AE38E2-400B-485B-B96C-D4CC44D7A075}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4AE38E2-400B-485B-B96C-D4CC44D7A075}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A4AE38E2-400B-485B-B96C-D4CC44D7A075}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4AE38E2-400B-485B-B96C-D4CC44D7A075}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4AE38E2-400B-485B-B96C-D4CC44D7A075}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

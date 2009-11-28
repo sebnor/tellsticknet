@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using TellStick;
+using System.Diagnostics;
 
 namespace Tellstick_Test
 {
@@ -36,7 +37,7 @@ namespace Tellstick_Test
             btnTurnOn.Enabled = false;
             btnTurnOff.Enabled = false;
             btnToggle.Enabled = false;
-            btnDim.Enabled = false;
+            trackBar1.Enabled = false;
             btnLearn.Enabled = false;
 
             if (d != null && d.DeviceId > 0)
@@ -54,7 +55,7 @@ namespace Tellstick_Test
                     btnBell.Enabled = true;
 
                 if (d.HasMethod(TellStickMethods.Dim))
-                    btnDim.Enabled = true;
+                    trackBar1.Enabled = true;
 
                 if (d.HasMethod(TellStickMethods.Learn))
                     btnLearn.Enabled = true;
@@ -149,6 +150,20 @@ namespace Tellstick_Test
         private void button2_Click(object sender, EventArgs e)
         {
             Base.DeviceEvent -= new DeviceEventHandler(Base_DeviceEvent);
+        }
+
+        private void trackBar1_ValueChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void trackBar1_MouseCaptureChanged(object sender, EventArgs e)
+        {
+            Debug.WriteLine("Trackbar: " + trackBar1.Value);
+            if (d.HasMethod(TellStickMethods.Dim))
+            {
+                d.Dim(trackBar1.Value);
+            }
         }
     }
 }
