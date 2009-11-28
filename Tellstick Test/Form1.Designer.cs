@@ -36,16 +36,16 @@
             this.btnTurnOn = new System.Windows.Forms.Button();
             this.btnTurnOff = new System.Windows.Forms.Button();
             this.btnToggle = new System.Windows.Forms.Button();
-            this.btnDim = new System.Windows.Forms.Button();
             this.btnBell = new System.Windows.Forms.Button();
             this.btnLearn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnGetLamps
             // 
-            this.btnGetLamps.Location = new System.Drawing.Point(497, 12);
+            this.btnGetLamps.Location = new System.Drawing.Point(417, 12);
             this.btnGetLamps.Name = "btnGetLamps";
             this.btnGetLamps.Size = new System.Drawing.Size(75, 23);
             this.btnGetLamps.TabIndex = 1;
@@ -58,7 +58,7 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(12, 12);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(480, 238);
+            this.listBox1.Size = new System.Drawing.Size(399, 238);
             this.listBox1.TabIndex = 2;
             this.listBox1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listBox1_MouseDoubleClick);
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
@@ -73,7 +73,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(497, 70);
+            this.btnDelete.Location = new System.Drawing.Point(417, 70);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 8;
@@ -83,7 +83,7 @@
             // 
             // btnNew
             // 
-            this.btnNew.Location = new System.Drawing.Point(497, 41);
+            this.btnNew.Location = new System.Drawing.Point(417, 41);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(75, 23);
             this.btnNew.TabIndex = 9;
@@ -121,18 +121,9 @@
             this.btnToggle.UseVisualStyleBackColor = true;
             this.btnToggle.Click += new System.EventHandler(this.btnToggle_Click);
             // 
-            // btnDim
-            // 
-            this.btnDim.Location = new System.Drawing.Point(255, 256);
-            this.btnDim.Name = "btnDim";
-            this.btnDim.Size = new System.Drawing.Size(75, 23);
-            this.btnDim.TabIndex = 14;
-            this.btnDim.Text = "Dim";
-            this.btnDim.UseVisualStyleBackColor = true;
-            // 
             // btnBell
             // 
-            this.btnBell.Location = new System.Drawing.Point(336, 256);
+            this.btnBell.Location = new System.Drawing.Point(255, 256);
             this.btnBell.Name = "btnBell";
             this.btnBell.Size = new System.Drawing.Size(75, 23);
             this.btnBell.TabIndex = 15;
@@ -142,43 +133,43 @@
             // 
             // btnLearn
             // 
-            this.btnLearn.Location = new System.Drawing.Point(417, 256);
+            this.btnLearn.Location = new System.Drawing.Point(336, 256);
             this.btnLearn.Name = "btnLearn";
             this.btnLearn.Size = new System.Drawing.Size(75, 23);
             this.btnLearn.TabIndex = 16;
             this.btnLearn.Text = "Learn";
             this.btnLearn.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // trackBar1
             // 
-            this.button1.Location = new System.Drawing.Point(511, 162);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.trackBar1.LargeChange = 1;
+            this.trackBar1.Location = new System.Drawing.Point(12, 298);
+            this.trackBar1.Maximum = 255;
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Size = new System.Drawing.Size(104, 45);
+            this.trackBar1.TabIndex = 19;
+            this.trackBar1.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.trackBar1.MouseCaptureChanged += new System.EventHandler(this.trackBar1_MouseCaptureChanged);
+            this.trackBar1.ValueChanged += new System.EventHandler(this.trackBar1_ValueChanged);
             // 
-            // button2
+            // label1
             // 
-            this.button2.Location = new System.Drawing.Point(511, 204);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 18;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(18, 282);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(42, 13);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Dimmer";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(580, 296);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(508, 330);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.btnLearn);
             this.Controls.Add(this.btnBell);
-            this.Controls.Add(this.btnDim);
             this.Controls.Add(this.btnToggle);
             this.Controls.Add(this.btnTurnOff);
             this.Controls.Add(this.btnTurnOn);
@@ -190,6 +181,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,11 +197,10 @@
         private System.Windows.Forms.Button btnTurnOn;
         private System.Windows.Forms.Button btnTurnOff;
         private System.Windows.Forms.Button btnToggle;
-        private System.Windows.Forms.Button btnDim;
         private System.Windows.Forms.Button btnBell;
         private System.Windows.Forms.Button btnLearn;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.Label label1;
     }
 }
 

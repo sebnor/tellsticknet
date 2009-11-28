@@ -90,7 +90,7 @@ namespace TellStick.Protocols
                 return TellStickMethods.TurnOff | TellStickMethods.TurnOn;
             else if (type == TellStickSettingTypes.SelfLearningSwitch)
                 return TellStickMethods.TurnOff | TellStickMethods.TurnOn | TellStickMethods.Learn;
-            else if (type == TellStickSettingTypes.CodeSwitch)
+            else if (type == TellStickSettingTypes.SelfLearningDimmer)
                 return TellStickMethods.TurnOff | TellStickMethods.TurnOn | TellStickMethods.Learn | TellStickMethods.Dim;
             else
                 return 0;
