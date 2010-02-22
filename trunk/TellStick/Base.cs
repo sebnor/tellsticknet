@@ -8,6 +8,13 @@ namespace TellStick
 {
     public static class Base
     {
+        private static TellStickMethods _supportedMethods = TellStickMethods.Bell | TellStickMethods.Dim | TellStickMethods.Learn | TellStickMethods.Toggle | TellStickMethods.TurnOff | TellStickMethods.TurnOn;
+        public static TellStickMethods SupportedMethods
+        {
+            get { return _supportedMethods; }
+            set { _supportedMethods = value; }
+        }
+
         public static int SendRawCommand(string command)
         {
             try
@@ -40,11 +47,11 @@ namespace TellStick
             }
         }
 
-        public static int GetMethods(int deviceId)
+        public static int GetMethods(int deviceId, TellStickMethods methodsSupported)
         {
             try
             {
-                int i = External.tdMethods(deviceId);
+                int i = External.tdMethods(deviceId, (int)methodsSupported);
                 return i;
             }
             catch (System.DllNotFoundException ex)

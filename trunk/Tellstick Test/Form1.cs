@@ -165,5 +165,10 @@ namespace Tellstick_Test
                 d.Dim(trackBar1.Value);
             }
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

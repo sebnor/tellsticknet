@@ -77,7 +77,7 @@ namespace TellStick
         internal static extern bool tdSetModel(int deviceId, string newName);
 
         [DllImport("TelldusCore.dll")]
-        internal static extern int tdMethods(int deviceId);
+        internal static extern int tdMethods(int deviceId, int methodsSupported);
 
         [DllImport("TelldusCore.dll")]
         internal static extern bool tdRemoveDevice(int deviceId);

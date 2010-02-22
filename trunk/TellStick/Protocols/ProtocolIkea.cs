@@ -60,18 +60,18 @@ namespace TellStick.Protocols
             return unitsParameter;
         }
 
-
+        //old code from when I thought there was a bug in tdMethods :P
         /// <summary>
         /// Only exists because I experienced some problem with tdMethods(), for some reason the method didn't always return correct flags.
         /// </summary>
         /// <param name="type"></param>
         /// <returns></returns>
-        public override TellStickMethods SupportedMethods(TellStickSettingTypes type)
-        {
-            if (type == TellStickSettingTypes.SelfLearning)
-                return TellStickMethods.TurnOff | TellStickMethods.TurnOn | TellStickMethods.Dim;
-            else
-                return 0;
-        }
+        //public override TellStickMethods SupportedMethods(TellStickSettingTypes type)
+        //{
+        //    if (type == TellStickSettingTypes.SelfLearning)
+        //        return TellStickMethods.TurnOff | TellStickMethods.TurnOn | TellStickMethods.Dim;
+        //    else
+        //        return 0;
+        //}
     }
 }
