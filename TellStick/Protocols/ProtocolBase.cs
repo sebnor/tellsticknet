@@ -11,7 +11,8 @@ namespace TellStick.Protocols
         public abstract TellStickSettingTypes SettingTypes { get; set; }
         public abstract IEnumerable<Parameter> GetParameters(TellStickSettingTypes type);
 
-        public virtual TellStickMethods SupportedMethods(TellStickSettingTypes type) { return 0; }
+        //old code from when I thought there was a bug in tdMethods :P
+        //public virtual TellStickMethods SupportedMethods(TellStickSettingTypes type) { return 0; }
 
         protected string _protocolName = "";
 

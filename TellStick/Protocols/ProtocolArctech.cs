@@ -77,23 +77,24 @@ namespace TellStick.Protocols
             return houseParameter;
         }
 
+        //old code from when I thought there was a bug in tdMethods :P
         /// <summary>
         /// Only exists because I experienced some problem with tdMethods(), for some reason the method didn't always return correct flags.
         /// </summary>
         /// <param name="type"></param>
         /// <returns></returns>
-        public override TellStickMethods SupportedMethods(TellStickSettingTypes type)
-        {
-            if (type == TellStickSettingTypes.Bell)
-                return TellStickMethods.Bell;
-            else if (type == TellStickSettingTypes.CodeSwitch)
-                return TellStickMethods.TurnOff | TellStickMethods.TurnOn;
-            else if (type == TellStickSettingTypes.SelfLearningSwitch)
-                return TellStickMethods.TurnOff | TellStickMethods.TurnOn | TellStickMethods.Learn;
-            else if (type == TellStickSettingTypes.SelfLearningDimmer)
-                return TellStickMethods.TurnOff | TellStickMethods.TurnOn | TellStickMethods.Learn | TellStickMethods.Dim;
-            else
-                return 0;
-        }
+        //public override TellStickMethods SupportedMethods(TellStickSettingTypes type)
+        //{
+        //    if (type == TellStickSettingTypes.Bell)
+        //        return TellStickMethods.Bell;
+        //    else if (type == TellStickSettingTypes.CodeSwitch)
+        //        return TellStickMethods.TurnOff | TellStickMethods.TurnOn;
+        //    else if (type == TellStickSettingTypes.SelfLearningSwitch)
+        //        return TellStickMethods.TurnOff | TellStickMethods.TurnOn | TellStickMethods.Learn;
+        //    else if (type == TellStickSettingTypes.SelfLearningDimmer)
+        //        return TellStickMethods.TurnOff | TellStickMethods.TurnOn | TellStickMethods.Learn | TellStickMethods.Dim;
+        //    else
+        //        return 0;
+        //}
     }
 }
