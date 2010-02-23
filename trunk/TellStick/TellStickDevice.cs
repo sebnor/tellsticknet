@@ -21,12 +21,15 @@ namespace TellStick
         {
             get
             {
+
+                if (TellStick.Base.SupportedMethods == null)
+                    throw new TellStickException("Please define supported methods in TellStick.Base.SupportedMethods");
                 //old code from when I thought there was a bug in tdMethods :P
                 //if (((int)_methods) < 1)
                 //    _methods = Model.Protocol.SupportedMethods(ControlType);
 
-                //if (((int)_methods) < 1)
-                    _methods = (TellStickMethods)Base.GetMethods(DeviceId, TellStick.Base.SupportedMethods);
+                //if (((int)_methods) < 1) 
+                    _methods = (TellStickMethods)Base.GetMethods(DeviceId, (TellStickMethods)TellStick.Base.SupportedMethods);
 
                 return _methods;
             }
@@ -50,7 +53,12 @@ namespace TellStick
 
         public TellStickMethods LastSentCommand
         {
-            get { return Base.GetLastSentCommand(this.DeviceId, TellStick.Base.SupportedMethods); }
+            get
+            {
+                if (TellStick.Base.SupportedMethods == null)
+                    throw new TellStickException("Please define supported methods in TellStick.Base.SupportedMethods");
+                return Base.GetLastSentCommand(this.DeviceId, (TellStickMethods)TellStick.Base.SupportedMethods);
+            }
         }
 
         public string LastSetValue

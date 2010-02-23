@@ -17,6 +17,7 @@ namespace Tellstick_Test
         public Form1()
         {
             InitializeComponent();
+            TellStick.Base.SupportedMethods = TellStickMethods.TurnOn | TellStickMethods.TurnOff | TellStickMethods.Toggle | TellStickMethods.Learn | TellStickMethods.Dim | TellStickMethods.Bell;
             GetDevices();
         }
 
