@@ -8,8 +8,8 @@ namespace TellStick
 {
     public static class Base
     {
-        private static TellStickMethods _supportedMethods = TellStickMethods.Bell | TellStickMethods.Dim | TellStickMethods.Learn | TellStickMethods.Toggle | TellStickMethods.TurnOff | TellStickMethods.TurnOn;
-        public static TellStickMethods SupportedMethods
+        private static TellStickMethods? _supportedMethods = null;
+        public static TellStickMethods? SupportedMethods
         {
             get { return _supportedMethods; }
             set { _supportedMethods = value; }
